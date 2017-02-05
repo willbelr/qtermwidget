@@ -98,6 +98,8 @@ public:
     void setTerminalOpacity(qreal level);
     void setTerminalBackgroundImage(QString backgroundImage);
 
+    void setWordCharacters(const QString& wc);
+
     //environment
     void setEnvironment(const QStringList & environment);
 

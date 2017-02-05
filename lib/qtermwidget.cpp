@@ -345,6 +345,14 @@ void QTermWidget::setTerminalBackgroundImage(QString backgroundImage)
     m_impl->m_terminalDisplay->setBackgroundImage(backgroundImage);
 }
 
+void QTermWidget::setWordCharacters(const QString& text)
+{
+    if (!m_impl->m_terminalDisplay)
+        return;
+
+    m_impl->m_terminalDisplay->setWordCharacters(text);
+}
+
 void QTermWidget::setShellProgram(const QString &progname)
 {
     if (!m_impl->m_session)
