@@ -78,6 +78,8 @@ public:
    */
   ColorEntry() : transparent(false), fontWeight(UseCurrentFormat) {}
 
+  ColorEntry(const ColorEntry&) = default;
+
   /**
    * Sets the color, transparency and boldness of this color to those of @p rhs.
    */

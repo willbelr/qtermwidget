@@ -22,6 +22,7 @@
 #include "History.h"
 
 // System
+#include <algorithm>
 #include <iostream>
 #include <cstdlib>
 #include <cstdio>
@@ -313,8 +314,7 @@ void HistoryScrollBuffer::addCellsVector(const QVector<Character>& cells)
 void HistoryScrollBuffer::addCells(const Character a[], int count)
 {
   HistoryLine newLine(count);
-  qCopy(a,a+count,newLine.begin());
-
+  std::copy(a,a+count,newLine.begin());
   addCellsVector(newLine);
 }
 
@@ -726,11 +726,11 @@ void CompactHistoryScroll::addCellsVector ( const TextLine& cells )
   lines.append ( line );
 }
 
-void CompactHistoryScroll::addCells ( const Character a[], int count )
+void CompactHistoryScroll::addCells(const Character a[], int count)
 {
-  TextLine newLine ( count );
-  qCopy ( a,a+count,newLine.begin() );
-  addCellsVector ( newLine );
+  TextLine newLine(count);
+  std::copy(a, a+count, newLine.begin());
+  addCellsVector(newLine);
 }
 
 void CompactHistoryScroll::addLine ( bool previousWrapped )
