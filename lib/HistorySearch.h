@@ -22,6 +22,7 @@
 #include <QObject>
 #include <QPointer>
 #include <QMap>
+#include <QRegExp>
 
 #include <Session.h>
 #include <ScreenWindow.h>
